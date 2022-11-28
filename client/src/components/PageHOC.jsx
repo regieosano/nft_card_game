@@ -13,30 +13,30 @@ const PageHOC = (Component, title, description) => () => {
 				<img src={logo} alt="logo" className={styles.hocLogo} onClick={() => navigate('/')}/>
 
 				<div className={styles.hocBodyWrapper}>
-				  <div className="flex flex-row w-full">
-						<h1 className={`flex ${styles.headText} head-text`}>
-							{title}
-						</h1>
-					</div>
+				    <div className="flex flex-row w-full">
+						  <h1 className={`flex ${styles.headText} head-text`}>
+						  	{title}
+					  	</h1>
+				  	</div>
 					
-          <p className={`${styles.normalText} my-10`}>
-						{description}
-					</p>
+            <p className={`${styles.normalText} my-10`}>
+						  {description}
+					  </p>
 
-					<Component />
-
-          <p className={styles.footerText}>
-						Made with love by RegieOsano
-					</p>
-
-					<div className="flex flex-1">
-						<img src={heroImg} alt="hero-img" className="w-full xl:h-full object-cover"/>
-					</div>
-
+					  <Component />
 				</div>
+        <p className={styles.footerText}>
+				    Made with 💜 by RegieOsano
+				</p>
+			</div>
+			<div className="flex flex-1">
+					<img src={heroImg}
+					 alt="hero-img"
+					 className="w-full xl:h-full object-cover"
+					/>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default PageHOC
+export default PageHOC;
